@@ -2,6 +2,7 @@ import numpy
 
 def load(file_directory,file_extension):
     """Loads all file names within a given directory and with a given extension into a dictionary"""
+    dictionary_of_objects = {}
     return dictionary_of_objects
 
 def initialize(dictionary_of_objects):

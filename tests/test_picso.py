@@ -1,4 +1,5 @@
 from unittest import TestCase
+from picso import Album
 
 class PicsoTestCase(TestCase):
 

@@ -1,6 +1,4 @@
 import numpy
-import json
-
 def load(file_directory: str, file_extension: str):
     """Loads all file names within a given directory and with a given extension into a dictionary"""
 

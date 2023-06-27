@@ -1,4 +1,25 @@
-import numpy
+class Album:
+    """Collection of pictures and respective scores"""
+
+    def __init__(self, title, size):
+        self.title = title
+        self.size = size
+
+    def __str__(self):
+        return f"Album '{self.title}', {self.size} pictures"
+
+
+class Picture:
+    """Picture and respective score"""
+
+    def __init__(self, title, score):
+        self.title = title
+        self.score = score
+
+    def __str__(self):
+        return f"Picture '{self.title}', score {self.score} pictures"
+
+
 def load(file_directory: str, file_extension: str):
     """Loads all file names within a given directory and with a given extension into a dictionary"""
 
@@ -8,49 +29,54 @@ def load(file_directory: str, file_extension: str):
     if type(file_extension) != str:
         raise TypeError("file_extension must be a string")
 
-    # create dictionary of objects
-    dictionary_of_objects = {}
+    # create dictionary of pictures
+    album = {}
 
-    return dictionary_of_objects
+    return album
 
-def initialize(dictionary_of_objects: dict):
-    """Randomly assigns a unique integer score to each of the objects in a dictionary"""
 
-    # check correctness of parameter types
-    if type(dictionary_of_objects) != dict:
-        raise TypeError("dictionary_of_objects must be a dictionary")
-
-    return dictionary_of_objects
-
-def select_pair(dictionary_of_objects: dict):
-    """Randomly selects two of the objects in a dictionary"""
+def initialize(album: dict):
+    """Randomly assigns a unique integer score to each of the pictures in a dictionary"""
 
     # check correctness of parameter types
-    if type(dictionary_of_objects) != dict:
-        raise TypeError("dictionary_of_objects must be a dictionary")
+    if type(album) != dict:
+        raise TypeError("album must be a dictionary")
 
-    (object1, object2) = ()
+    return album
 
-    return (object1, object2)
 
-def compare(object1: dict, object2: dict):
-    """Facilitates user-based comparison of two objects"""
-
-    # check correctness of parameter types
-    if type(object1) != dict:
-        raise TypeError("object1 must be a dictionary")
-    if type(object2) != dict:
-        raise TypeError("object2 must be a dictionary")
-
-    return (object1, object2)
-
-def switch(object1: dict, object2: dict):
-    """Switches scores of two objects"""
+def select_pair(album: dict):
+    """Randomly selects two of the pictures in a dictionary"""
 
     # check correctness of parameter types
-    if type(object1) != dict:
-        raise TypeError("object1 must be a dictionary")
-    if type(object2) != dict:
-        raise TypeError("object2 must be a dictionary")
+    if type(album) != dict:
+        raise TypeError("album must be a dictionary")
 
-    return (object1, object2)
+    picture1 = {}
+    picture2 = {}
+
+    return picture1, picture2
+
+
+def compare(picture1: dict, picture2: dict):
+    """Facilitates user-based comparison of two pictures"""
+
+    # check correctness of parameter types
+    if type(picture1) != dict:
+        raise TypeError("picture1 must be a dictionary")
+    if type(picture2) != dict:
+        raise TypeError("picture2 must be a dictionary")
+
+    return picture1, picture2
+
+
+def switch(picture1: dict, picture2: dict):
+    """Switches scores of two pictures"""
+
+    # check correctness of parameter types
+    if type(picture1) != dict:
+        raise TypeError("picture1 must be a dictionary")
+    if type(picture2) != dict:
+        raise TypeError("picture2 must be a dictionary")
+
+    return picture1, picture2
